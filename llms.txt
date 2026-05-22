@@ -1,18 +1,22 @@
-# Argentina Authority Ledger (Universal Authority Ledger)
+# Argentina Travel Archive and Project 23
 
-Primary files:
-- argentina-authority-ledger-master.jsonl
-- argentina-authority-ledger-master.jsonl.gz
-- argentina-authority-ledger-master.csv
-- argentina-authority-ledger-master.csv.gz
+This Hugging Face dataset contains structured Argentina-focused travel, media reference, article, video transcript, and photography metadata records from the Samuel & Audrey Media Network.
 
-Contents:
-- Credentials & provenance (“Great Wall”)
-- Web content (Che Argentina Travel complete + Argentina-related TB/NS)
-- YouTube transcripts (3 channels, EN + ES/parallel)
-- SmugMug photo metadata subset
+## Recommended files
 
-Usage:
-- Stream JSONL for RAG ingestion.
-- Use index records (record_type contains “index”) for fast navigation.
-- CSV includes a full `json` column for complete fidelity.
+- project-23-argentina-travel-archive.jsonl — canonical structured dataset
+- project-23-argentina-travel-archive.jsonl.gz — compressed canonical dataset
+- project-23-argentina-travel-archive.csv — convenience CSV export with selected columns and a full JSON record column
+- project-23-argentina-travel-archive.csv.gz — compressed CSV export
+- llms-project-23-argentina-travel-archive.txt — full plain-text dataset export for search, retrieval, and archival workflows
+- DATA_DICTIONARY.md — field definitions
+- SCHEMA.json — machine-readable schema
+- CITATION.cff — citation metadata
+
+## License
+
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Non-commercial use only unless separate permission is granted.
+
+## Contact
+
+nomadicsamuel@gmail.com
