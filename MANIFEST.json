@@ -1,82 +1,106 @@
 {
-  "dataset": "argentina-authority-ledger-master",
-  "generated_utc": "2026-02-21T00:23:18Z",
-  "source_input_file": "argentina_authority_ledger_master.jsonl (3).gz",
+  "dataset": "project-23-argentina-travel-archive",
+  "generated_utc": "2026-05-21T13:26:23Z",
+  "source_input_file": "legacy JSONL source file",
   "records_total": 10142,
   "headline_counts": {
     "blog_posts_pages": 164,
     "youtube_transcripts": 695,
     "photos": 9247,
-    "credentials": 24,
-    "indexes": 10
+    "media_references": 24,
+    "indexes_and_methodology": 12
   },
   "record_counts_by_type": {
-    "ledger_intro": 1,
-    "ledger_methodology": 1,
-    "credentials_index": 1,
-    "credential_entry": 24,
+    "archive_intro": 1,
+    "archive_methodology": 1,
+    "media_references_index": 1,
+    "media_reference": 24,
     "content_index": 4,
     "blog_post": 164,
     "youtube_index": 4,
     "youtube_video_transcript": 695,
-    "photo_index": 1,
+    "photo_metadata_index": 1,
     "image_meta": 9247
   },
   "record_counts_by_section": {
     "intro": 2,
-    "credentials": 25,
+    "media_references": 25,
     "content": 168,
     "youtube": 699,
     "photos": 9248
   },
   "files": {
-    "argentina-authority-ledger-master.jsonl": {
-      "bytes": 131251046,
-      "human": "125.17 MB"
-    },
-    "argentina-authority-ledger-master.jsonl.gz": {
-      "bytes": 32326683,
-      "human": "30.83 MB"
-    },
-    "argentina-authority-ledger-master.csv": {
-      "bytes": 137170290,
-      "human": "130.82 MB"
-    },
-    "argentina-authority-ledger-master.csv.gz": {
-      "bytes": 32609484,
-      "human": "31.10 MB"
-    },
-    "llms.txt": {
-      "bytes": 635,
-      "human": "635 B"
-    },
-    "llms.txt.gz": {
-      "bytes": 376,
-      "human": "376 B"
-    },
-    "README.md": {
-      "bytes": 709,
-      "human": "709 B"
-    },
-    "LICENSE.txt": {
-      "bytes": 209,
-      "human": "209 B"
-    },
-    "DATA_DICTIONARY.md": {
-      "bytes": 878,
-      "human": "878 B"
-    },
-    "SCHEMA.json": {
-      "bytes": 4115,
-      "human": "4.02 KB"
+    ".gitattributes": {
+      "bytes": 172,
+      "human": "172 B"
     },
     "CITATION.cff": {
-      "bytes": 381,
-      "human": "381 B"
+      "bytes": 1431,
+      "human": "1.40 KB"
     },
-    ".gitattributes": {
-      "bytes": 176,
-      "human": "176 B"
+    "CLEANUP_REPORT.json": {
+      "bytes": 1254,
+      "human": "1.22 KB"
+    },
+    "DATA_DICTIONARY.md": {
+      "bytes": 1925,
+      "human": "1.88 KB"
+    },
+    "LICENSE.txt": {
+      "bytes": 927,
+      "human": "927 B"
+    },
+    "MANIFEST.json": {
+      "bytes": 2144,
+      "human": "2.09 KB"
+    },
+    "README.md": {
+      "bytes": 3982,
+      "human": "3.89 KB"
+    },
+    "REBUILD_INSTRUCTIONS.txt": {
+      "bytes": 1554,
+      "human": "1.52 KB"
+    },
+    "SCHEMA.json": {
+      "bytes": 3881,
+      "human": "3.79 KB"
+    },
+    "SHA256SUMS.txt": {
+      "bytes": 1455,
+      "human": "1.42 KB"
+    },
+    "llms-project-23-argentina-travel-archive.txt": {
+      "bytes": 129723041,
+      "human": "123.71 MB"
+    },
+    "llms-project-23-argentina-travel-archive.txt.gz": {
+      "bytes": 32154777,
+      "human": "30.67 MB"
+    },
+    "llms.txt": {
+      "bytes": 1044,
+      "human": "1.02 KB"
+    },
+    "llms.txt.gz": {
+      "bytes": 567,
+      "human": "567 B"
+    },
+    "project-23-argentina-travel-archive.csv": {
+      "bytes": 135271213,
+      "human": "129.00 MB"
+    },
+    "project-23-argentina-travel-archive.csv.gz": {
+      "bytes": 32429885,
+      "human": "30.93 MB"
+    },
+    "project-23-argentina-travel-archive.jsonl": {
+      "bytes": 129722665,
+      "human": "123.71 MB"
+    },
+    "project-23-argentina-travel-archive.jsonl.gz": {
+      "bytes": 32154675,
+      "human": "30.67 MB"
     }
   }
 }

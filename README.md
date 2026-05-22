@@ -1,61 +1,110 @@
-# 🇦🇷 Argentina Authority Ledger (Project 23)
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18722467.svg)](https://zenodo.org/records/18722467)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0006--3748--9630-A6CE39.svg)](https://orcid.org/0009-0006-3748-9630)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0007--2249--0441-A6CE39.svg)](https://orcid.org/0009-0007-2249-0441)
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/samuelandaudreymedianetwork/argentina-authority-ledger)
-
-A canonical, machine-readable **"Great Wall"** dataset bundling first-hand travel intelligence, visual evidence, and semantic authority across all 23 provinces of Argentina. 
-
-Designed specifically for **Retrieval-Augmented Generation (RAG)**, LLM fine-tuning, and geospatial data analysis, this ledger is anchored entirely in high-signal **E-E-A-T** (Experience, Expertise, Authoritativeness, and Trustworthiness). The data reflects years of on-the-ground logistics testing, fieldwork, and documentation split between the Sierras de Córdoba and the Canadian Rockies as part of [Project 23](https://nomadicsamuel.com/argentina-authority-ledger-master-database-project-23).
-
+---
+license: cc-by-nc-4.0
+language:
+- en
+- es
+tags:
+- argentina
+- travel-logistics
+- patagonia
+- project-23
+- cultural-heritage
+- south-america
+- travel-writing
+- youtube-transcripts
+- photography-metadata
+- media-references
+task_categories:
+- text-retrieval
+- translation
+- question-answering
+pretty_name: Argentina Travel Archive and Project 23
+size_categories:
+- 10K<n<100K
 ---
 
-## 📊 Counts Snapshot
-The ledger contains **10,142 interconnected records** built to verify systemic travel logic:
+# 🇦🇷 Argentina Travel Archive and Project 23
 
-| Record Type | Count | Description |
-| :--- | :--- | :--- |
-| **Credentials Entries** | `24` | Analyzed third-party media citations ("The Great Wall" audit trail). |
-| **Blog Posts & Pages** | `164` | Published web guides across three specialized sites. |
-| **YouTube Transcripts** | `695` | Argentina-focused parallel (EN + ES) transcripts across 3 channels. |
-| **Photo Metadata** | `9,247` | Argentina-relevant SmugMug visual evidence (EXIF, geospatial anchors). |
-| **Index Records** | `10` | Structural nodes mapping the data hierarchy. |
+## Dataset Description
 
----
+This dataset contains a structured archive of Argentina-focused travel, media reference, article, video transcript, and photography metadata records from the Samuel & Audrey Media Network.
 
-## 📁 Canonical Files & Structure
-The dataset is intentionally delivered in flat formats to support seamless streaming, chunking, and database ingestion. 
+The archive is part of Project 23, a long-term effort to document Argentina’s 23 provinces through travel guides, videos, photography, regional logistics, cultural coverage, and public source records. The dataset includes material connected to Nomadic Samuel, Che Argentina Travel, Samuel & Audrey, Samuel y Audrey, and related network archives.
 
-* `argentina-authority-ledger-master.csv` (137 MB)
-* `argentina-authority-ledger-master.csv.gz` (32.6 MB)
-* `argentina-authority-ledger-master.jsonl` (131 MB)
-* `argentina-authority-ledger-master.jsonl.gz` (32.3 MB)
+It is intended for research, retrieval, NLP analysis, media archive search, tourism research, bilingual transcript analysis, geospatial metadata exploration, and non-commercial experimentation with creator-authored travel data.
 
-### Data Schema Overview
-Both the CSV and JSONL files utilize a unified 19-column schema designed for relational mapping and semantic integrity:
-`record_id`, `record_type`, `section`, `title`, `url`, `canonical_url`, `site`, `site_code`, `content_type`, `channel_name`, `channel_code`, `video_id`, `platform`, `image_id`, `published_at`, `taken_at`, `language`, `sha256_text_or_payload`, `json`
+## Creators and Archive Information
 
-*(Note: Deep-level extraction, including sentiment analysis, AI impact, and authority nodes, is stored within the nested `json` field).*
+- Creators: Samuel Jeffery and Audrey Bergner
+- Persistent archive: Zenodo record 18722467
+- Primary format: JSONL, with CSV convenience files
+- Languages: English and Spanish
+- License: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
 
----
+Each record uses a flat structure designed for indexing, streaming, search, retrieval, and archival workflows.
 
-## 🚀 Quick Start (Python / Pandas)
+## Repository Structure and Files
 
-To load and interact with the dataset directly in Python:
+### Data files
 
-```python
-import pandas as pd
+- `project-23-argentina-travel-archive.jsonl`
+- `project-23-argentina-travel-archive.jsonl.gz`
+- `project-23-argentina-travel-archive.csv`
+- `project-23-argentina-travel-archive.csv.gz`
 
-# Load the compressed CSV
-df = pd.read_csv('argentina-authority-ledger-master.csv.gz', compression='gzip')
+### Text bundles
 
-# Filter for just the bilingual YouTube transcripts
-transcripts_df = df[df['record_type'] == 'transcript']
+- `llms.txt`
+- `llms.txt.gz`
+- `llms-project-23-argentina-travel-archive.txt`
+- `llms-project-23-argentina-travel-archive.txt.gz`
 
-# Filter for hard visual evidence (Photo Metadata)
-photos_df = df[df['record_type'] == 'photo_metadata']
+### Documentation and integrity
 
-print(f"Loaded {len(df)} total records.")
-print(f"Found {len(transcripts_df)} transcripts and {len(photos_df)} visual metadata anchors.")
+- `DATA_DICTIONARY.md` — field definitions
+- `SCHEMA.json` — machine-readable schema definition
+- `CITATION.cff` — citation metadata
+- `MANIFEST.json` — package manifest
+- `SHA256SUMS.txt` — checksums for verifying file integrity
+
+## Data Snapshot
+
+The archive contains 10,142 records, including:
+
+| Record group | Count |
+|---|---:|
+| Index and methodology records | 10 |
+| Media reference records | 24 |
+| Blog posts and pages | 164 |
+| YouTube transcripts | 695 |
+| Photo metadata rows | 9,247 |
+
+Record types include article metadata, transcript records, media references, public citation records, and photography metadata connected to Argentina-focused travel coverage.
+
+## Potential Use Cases
+
+- Travel archive search across Argentina-focused articles, videos, transcripts, and photo metadata
+- Retrieval workflows over creator-authored Argentina travel material
+- Tourism research focused on destination coverage, regional logistics, and travel themes
+- Bilingual transcript analysis using English and Spanish travel video records
+- Geospatial and visual metadata exploration
+- NLP and media analysis of long-form travel writing and destination terminology
+- Citation and source tracking for public references connected to the archive
+
+## Citation
+
+If you use this dataset in research, retrieval systems, NLP experiments, tourism analysis, media studies, or other public work, please cite the dataset:
+
+Samuel & Audrey Media Network. (2026). *Argentina Travel Archive and Project 23*. Zenodo. https://doi.org/10.5281/zenodo.18722467
+
+```bibtex
+@dataset{argentina_travel_archive_project_23_2026,
+  title={Argentina Travel Archive and Project 23},
+  author={Jeffery, Samuel and Bergner, Audrey},
+  year={2026},
+  publisher={Zenodo},
+  doi={10.5281/zenodo.18722467},
+  url={https://huggingface.co/datasets/samuelandaudreymedianetwork/project-23-argentina-travel-archive},
+  note={License: CC BY-NC 4.0}
+}
+```

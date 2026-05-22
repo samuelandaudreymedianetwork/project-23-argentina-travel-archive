@@ -1,195 +1,179 @@
 {
-  "dataset": "argentina-authority-ledger-master",
-  "schema_version": "1.0",
-  "generated_utc": "2026-02-21T00:23:18Z",
-  "record_types": {
-    "ledger_intro": {
-      "count": 1,
-      "required_fields_95pct_rule": [
-        "char_count",
-        "language",
-        "record_id",
-        "record_type",
-        "section",
-        "sha256",
-        "text",
-        "title"
-      ],
-      "optional_fields_observed": []
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Argentina Travel Archive and Project 23 Record",
+  "description": "Schema for records in the Argentina Travel Archive and Project 23 dataset.",
+  "type": "object",
+  "required": [
+    "record_id",
+    "record_type",
+    "section",
+    "title"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "description": "Stable record identifier."
     },
-    "ledger_methodology": {
-      "count": 1,
-      "required_fields_95pct_rule": [
-        "char_count",
-        "language",
-        "record_id",
-        "record_type",
-        "section",
-        "sha256",
-        "text",
-        "title"
-      ],
-      "optional_fields_observed": []
-    },
-    "credentials_index": {
-      "count": 1,
-      "required_fields_95pct_rule": [
-        "count",
-        "items",
-        "language",
-        "record_id",
-        "record_type",
-        "section",
-        "sha256",
-        "title"
-      ],
-      "optional_fields_observed": []
-    },
-    "credential_entry": {
-      "count": 24,
-      "required_fields_95pct_rule": [
-        "canonical_url",
-        "char_count",
-        "entry_num",
-        "language",
-        "provenance",
-        "published_date_raw",
-        "record_id",
-        "record_type",
-        "section",
-        "sha256",
-        "source_outlet_raw",
-        "status",
-        "text",
-        "title"
-      ],
-      "optional_fields_observed": []
-    },
-    "content_index": {
-      "count": 4,
-      "required_fields_95pct_rule": [
-        "count",
-        "items",
-        "language",
-        "record_id",
-        "record_type",
-        "section",
-        "sha256",
-        "summary",
-        "title"
-      ],
-      "optional_fields_observed": []
-    },
-    "blog_post": {
-      "count": 164,
-      "required_fields_95pct_rule": [
-        "canonical_url",
-        "categories",
-        "char_count",
-        "content_type",
-        "excerpt",
-        "language",
-        "modified_at",
-        "provenance",
-        "published_at",
-        "record_id",
-        "record_type",
-        "section",
-        "sha256",
-        "site",
-        "site_code",
-        "slug",
-        "tags",
-        "text",
-        "title",
-        "url",
-        "word_count"
-      ],
-      "optional_fields_observed": [
-        "argentina_inclusion",
-        "argentina_match_reasons"
+    "record_type": {
+      "type": "string",
+      "description": "Record category.",
+      "enum": [
+        "archive_intro",
+        "archive_methodology",
+        "blog_post",
+        "content_index",
+        "image_meta",
+        "media_reference",
+        "media_references_index",
+        "photo_metadata_index",
+        "youtube_index",
+        "youtube_video_transcript"
       ]
     },
-    "youtube_index": {
-      "count": 4,
-      "required_fields_95pct_rule": [
-        "count",
-        "items",
-        "record_id",
-        "record_type",
-        "section",
-        "sha256",
-        "stats",
-        "title"
-      ],
-      "optional_fields_observed": []
+    "section": {
+      "type": "string",
+      "description": "Broad dataset section.",
+      "enum": [
+        "content",
+        "intro",
+        "media_references",
+        "photos",
+        "youtube"
+      ]
     },
-    "youtube_video_transcript": {
-      "count": 695,
-      "required_fields_95pct_rule": [
-        "argentina_relevance",
-        "category",
-        "channel_code",
-        "channel_name",
-        "char_count_by_lang",
-        "description",
-        "duration_raw",
-        "extra",
-        "primary_language",
-        "provenance",
-        "published_at",
-        "record_id",
-        "record_type",
-        "section",
-        "segments",
-        "sha256_transcripts",
-        "tags",
-        "title",
-        "transcripts",
-        "url",
-        "verified_video_ledger",
-        "video_id",
-        "word_count_by_lang"
+    "title": {
+      "type": [
+        "string",
+        "null"
       ],
-      "optional_fields_observed": []
+      "description": "Human-readable record title."
     },
-    "photo_index": {
-      "count": 1,
-      "required_fields_95pct_rule": [
-        "count",
-        "items",
-        "record_id",
-        "record_type",
-        "section",
-        "sha256",
-        "stats",
-        "title"
+    "url": {
+      "type": [
+        "string",
+        "null"
       ],
-      "optional_fields_observed": []
+      "description": "Public URL when available."
     },
-    "image_meta": {
-      "count": 9247,
-      "required_fields_95pct_rule": [
-        "alt_text",
-        "argentina_relevance",
-        "caption",
-        "categories",
-        "extra",
-        "image_id",
-        "keywords",
-        "location",
-        "modified_at",
-        "platform",
-        "provenance",
-        "record_id",
-        "record_type",
-        "section",
-        "sha256_meta_text",
-        "taken_at",
-        "title",
-        "url"
+    "canonical_url": {
+      "type": [
+        "string",
+        "null"
       ],
-      "optional_fields_observed": []
+      "description": "Canonical public URL when available."
+    },
+    "site": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Website or publication name when applicable."
+    },
+    "site_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Short site code when applicable."
+    },
+    "content_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Content type for article/page records."
+    },
+    "channel_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "YouTube channel name when applicable."
+    },
+    "channel_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "YouTube channel code when applicable."
+    },
+    "video_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "YouTube video ID when applicable."
+    },
+    "platform": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Platform name for media/photo records."
+    },
+    "image_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Image identifier when applicable."
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Publication timestamp or date when available."
+    },
+    "taken_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Photo capture timestamp when available."
+    },
+    "language": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Language code or label."
+    },
+    "text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Record text when available."
+    },
+    "source_metadata": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Source file or extraction metadata when available."
+    },
+    "sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "SHA-256 checksum for text or payload where provided."
+    },
+    "sha256_transcripts": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "SHA-256 checksum for transcript payloads where provided."
+    },
+    "sha256_meta_text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "SHA-256 checksum for photo metadata text where provided."
     }
-  }
+  },
+  "additionalProperties": true
 }
