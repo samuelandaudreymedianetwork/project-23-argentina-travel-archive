@@ -1,0 +1,13 @@
+# Original file checksums
+e3f83cf01a9373a59fbadbea41d566c81e984af38884b436fcbe7c6d1802e9e2  ORIGINAL/project-23-argentina-travel-archive.jsonl.gz
+6dc469d1758a4491ea2cdeddeb4a207538d50722d82b4d54c7872bc36e768ab8  ORIGINAL/project-23-argentina-travel-archive.csv.gz
+a82003cd5361e50a17f85c53dd699ea63148a7ec6b0453ca1a0fb3e692b19491  ORIGINAL/llms-project-23-argentina-travel-archive.txt.gz
+
+# Split file checksums
+436b9ea5422fdb9c07714977f784925e04de7d987ebfaf2cb821cf4e71ad2064  README_SPLIT_FILES.md
+5400fd96a01658172e0b590c5e039aae22b12c976d58ed5180ff77e24c442176  llms-project-23-argentina-travel-archive.txt.gz.part1
+f631d64204b061273c880c7f04770764572a051b3c0e8ebf3cda97510b487ab4  llms-project-23-argentina-travel-archive.txt.gz.part2
+f037b09769d2016a3be16e72e545b13dff102d6e36d29dd72a98732af60fa06d  project-23-argentina-travel-archive.csv.gz.part1
+7ad3def0c813f9daa4714a982f5a984900614fcbc0d6ddb75b6b2bdc90b46106  project-23-argentina-travel-archive.csv.gz.part2
+e2138fb96d5a5f4f111115190622340d012c28a6a7801b980fbb03459e9f2df0  project-23-argentina-travel-archive.jsonl.gz.part1
+e7e2ec3a810e36e1b2b25c5b4a96ac7059a6cd31ece8e19f0edccd4834c92458  project-23-argentina-travel-archive.jsonl.gz.part2
