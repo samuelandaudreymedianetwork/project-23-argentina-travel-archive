@@ -23,7 +23,7 @@ size_categories:
 - 10K<n<100K
 ---
 
-# 🇦🇷 Project 23 Argentina Travel Archiv
+# 🇦🇷 Project 23 Argentina Travel Archive
 
 ## Dataset Description
 
